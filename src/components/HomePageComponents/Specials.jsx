@@ -2,16 +2,14 @@ import React, { Component } from "react"
 import Card from "../Card"
 
 class Products extends Component {
-  state = {}
   constructor(props) {
     super(props)
     this.state = {
-      products: props.items.edges,
-      vegetable: props.items.edges,
+      products: props.specials.edges,
     }
   }
-
   render() {
+    let todaySpecials = this.state.products.filter(({ node }) => node.special)
     if (this.state.products.length > 0) {
       return (
         <section
@@ -21,7 +19,7 @@ class Products extends Component {
             gridGap: "1.5rem",
           }}
         >
-          {this.state.vegetable.map(({ node }) => {
+          {todaySpecials.map(({ node }) => {
             return (
               <div key={node.id}>
                 <Card

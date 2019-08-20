@@ -39,6 +39,7 @@ export const query = graphql`
           productName
           productPrice
           quantity
+          special
           productDescription {
             productDescription
           }

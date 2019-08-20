@@ -7,6 +7,7 @@ import {
   Gallery,
   GalleryWrapper,
 } from "../components/HomePageComponents/Gallery"
+import Specials from "../components/HomePageComponents/Specials"
 import Layout from "../components/layout"
 import SectionWrapper from "../components/SectionWrapper"
 import SEO from "../components/seo"
@@ -30,7 +31,7 @@ const IndexPage = ({ data }) => (
     <SectionWrapper>
       <div className={`container mx-auto`}>
         <Title title="Today's Specials" />
-        <p>lorem </p>
+        <Specials specials={data.specials}></Specials>
       </div>
     </SectionWrapper>
     <SectionWrapper bg="bg-white">
@@ -56,6 +57,26 @@ export const query = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    specials: allContentfulVeggieProducts {
+      edges {
+        node {
+          id
+          productName
+          productPrice
+          productCategory
+          quantity
+          special
+          productDescription {
+            productDescription
+          }
+          productImage {
+            fluid(maxWidth: 300) {
+              ...GatsbyContentfulFluid
+            }
+          }
         }
       }
     }
