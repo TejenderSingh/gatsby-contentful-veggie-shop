@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => (
       img={data.img.childImageSharp.fluid}
       title="Contact Us"
       styleClass="page-bg"
-      titleClass="text-2xl py-3 tracking-wider px-6 bg-green-500 text-white font-semibold"
+      titleClass="text-2xl tracking-wider px-10 py-4 bg-gray-900 shadow-xl text-gray-100 font-semibold"
     />
     <SectionWrapper></SectionWrapper>
   </Layout>

@@ -1,6 +1,8 @@
 import { graphql } from "gatsby"
 import React from "react"
+// import Card from "../components/Card"
 import BackgroundSection from "../components/globals/BackgroundSection"
+import AboutHomePage from "../components/HomePageComponents/About"
 import {
   Gallery,
   GalleryWrapper,
@@ -17,19 +19,33 @@ const IndexPage = ({ data }) => (
       img={data.img.childImageSharp.fluid}
       styleClass="defaultBg"
     >
-      <div>
+      <div className={`bg-gray-900`} style={{ opacity: ".95" }}>
         <h1
-          className={`text-2xl md:text-3xl lg:text-5xl capitalize bg-gray-200 py-12 px-12 text-gray-800 font-bold `}
+          className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl capitalize py-12 px-12 text-gray-100 font-bold shadow-xl tracking-wider`}
         >
           Your local farmer's market <br></br>for your healthy family
         </h1>
       </div>
     </BackgroundSection>
     <SectionWrapper>
-      <Title title="Gallery" />
-      <GalleryWrapper>
-        <Gallery />
-      </GalleryWrapper>
+      <div className={`container mx-auto`}>
+        <Title title="Today's Specials" />
+        <p>lorem </p>
+      </div>
+    </SectionWrapper>
+    <SectionWrapper bg="bg-white">
+      <div className={`container mx-auto lg:max-w-4xl`}>
+        <Title title="About us" />
+        <AboutHomePage></AboutHomePage>
+      </div>
+    </SectionWrapper>
+    <SectionWrapper>
+      <div className={`container mx-auto`}>
+        <Title title="Gallery" />
+        <GalleryWrapper>
+          <Gallery />
+        </GalleryWrapper>
+      </div>
     </SectionWrapper>
   </Layout>
 )
