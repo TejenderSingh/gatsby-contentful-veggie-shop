@@ -7,10 +7,14 @@ import "./layout.css"
 const Layout = ({ children }) => {
   return (
     <>
-      <div className={`bg-gray-200 min-h-screen font-sans`}>
-        <div className="container mx-auto antialiased">
+      <div className={`antialiased bg-gray-200 min-h-screen font-sans`}>
+        <div className={`bg-white`}>
           <Navbar />
+        </div>
+        <div className={``} style={{ minHeight: `calc(100vh - 80px)` }}>
           <main>{children}</main>
+        </div>
+        <div className={`bg-green-200`}>
           <Footer />
         </div>
       </div>
