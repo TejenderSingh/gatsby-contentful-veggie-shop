@@ -1,35 +1,21 @@
-import { Link } from "gatsby"
 import React from "react"
+import HamburgerIcon from "../MobileNav/HamburgerIcon"
+import Nav from "./Nav"
 
-const Navbar = () => {
+const Navbar = ({ toggleNav }) => {
   return (
-    <nav
-      className={`container mx-auto font-semibold px-6 flex justify-between py-4`}
-    >
-      <h1>Logo</h1>
-      <ul className={`flex justify-between`}>
-        <li>
-          <Link className={`ml-10`} to="/">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link className={`ml-10`} to="/about">
-            About
-          </Link>
-        </li>
-        <li>
-          <Link className={`ml-10`} to="/products">
-            Products
-          </Link>
-        </li>
-        <li>
-          <Link className={`ml-10`} to="/contact">
-            Contact
-          </Link>
-        </li>
-      </ul>
-    </nav>
+    <>
+      <div className="container mx-auto flex items-center md:justify-between py-4 px-8">
+        <div className="mr-6 md:hidden">
+          <HamburgerIcon nav={toggleNav} />
+        </div>
+        <div className="text-gray-100">Logo</div>
+        <Nav
+          navClasses="hidden md:block"
+          linkClasses="text-white ml-10 font-semibold py-4 border-b-2 border-solid border-transparent hover:border-gray-100"
+        />
+      </div>
+    </>
   )
 }
 

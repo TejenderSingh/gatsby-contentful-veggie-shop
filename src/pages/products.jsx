@@ -1,6 +1,7 @@
 import { graphql } from "gatsby"
 import React from "react"
 import BackgroundSection from "../components/globals/BackgroundSection"
+import ImageTitle from "../components/globals/ImageTitle"
 import Layout from "../components/layout"
 import Products from "../components/Products/Products"
 import SectionWrapper from "../components/SectionWrapper"
@@ -11,10 +12,10 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" />
     <BackgroundSection
       img={data.img.childImageSharp.fluid}
-      title="Products"
-      styleClass="page-bg"
-      titleClass="text-2xl tracking-wider px-10 py-4 bg-gray-900 shadow-xl text-gray-100 font-semibold"
-    />
+      styleClass="page-bg default-bg"
+    >
+      <ImageTitle title="Products" />
+    </BackgroundSection>
     <SectionWrapper>
       <div className={`container mx-auto`}>
         <Products items={data.products}></Products>
@@ -25,7 +26,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query {
-    img: file(relativePath: { eq: "8.jpg" }) {
+    img: file(relativePath: { eq: "products.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG

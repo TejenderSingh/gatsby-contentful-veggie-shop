@@ -1,0 +1,18 @@
+.side-nav {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  max-width: 20rem;
+  transform: translateX(-100%);
+  transition: transform 0.2s ease-in-out;
+}
+.side-nav.open {
+  transform: translateX(0);
+}

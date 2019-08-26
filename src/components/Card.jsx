@@ -22,8 +22,8 @@ const Card = ({ title, subTitle, price, img, quantity, special }) => {
               </span>
             </p>
             {special ? (
-              <span class="inline-block  bg-green-200 rounded-full px-3 py-1 text-xs font-semibold text-green-700">
-                special
+              <span className="inline-block  bg-green-200 rounded-full px-3 py-1 text-xs font-semibold text-green-700">
+                Special
               </span>
             ) : (
               ""

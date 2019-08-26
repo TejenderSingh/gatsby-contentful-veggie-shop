@@ -1,6 +1,5 @@
 import { graphql } from "gatsby"
 import React from "react"
-// import Card from "../components/Card"
 import BackgroundSection from "../components/globals/BackgroundSection"
 import AboutHomePage from "../components/HomePageComponents/About"
 import {
@@ -20,12 +19,22 @@ const IndexPage = ({ data }) => (
       img={data.img.childImageSharp.fluid}
       styleClass="defaultBg"
     >
-      <div className={`bg-gray-900`} style={{ opacity: ".95" }}>
-        <h1
-          className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl capitalize py-12 px-12 text-gray-100 font-bold shadow-xl tracking-wider`}
-        >
-          Your local farmer's market <br></br>for your healthy family
-        </h1>
+      <div>
+        <div className={`bg-gray-900`} style={{ opacity: "0.9" }}>
+          <h1
+            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl capitalize py-12 px-12 text-gray-100 font-bold shadow-xl tracking-wider`}
+          >
+            Your local farmer's market <br></br>for your healthy family
+          </h1>
+        </div>
+        <div className={`mt-12 flex justify-center`}>
+          <button
+            class="bg-gray-100 hover:bg-green-600 text-lg sm:text-xl md:text-2xl text-gray-800 hover:text-gray-100 font-semibold capitalize py-2 px-4 rounded shadow"
+            style={{ transition: ".2s ease-in-out" }}
+          >
+            see Products
+          </button>
+        </div>
       </div>
     </BackgroundSection>
     <SectionWrapper>
@@ -53,7 +62,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query {
-    img: file(relativePath: { eq: "8.jpg" }) {
+    img: file(relativePath: { eq: "home-page.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG

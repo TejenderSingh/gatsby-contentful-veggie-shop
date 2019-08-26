@@ -1,23 +1,15 @@
 import BackgroundImage from "gatsby-background-image"
 import React from "react"
 
-const BackgroundSection = ({
-  img,
-  styleClass,
-  titleClass,
-  title,
-  children,
-}) => {
+const BackgroundSection = ({ img, styleClass, children }) => {
   return (
-    <BackgroundImage className={styleClass} fluid={img}>
-      <h1 className={titleClass}>{title}</h1>
+    <BackgroundImage className={`${styleClass} cntr`} fluid={img}>
       {children}
     </BackgroundImage>
   )
 }
 
 BackgroundSection.defaultProps = {
-  // title: "Veggie Land",
   styleClass: "default-bg",
 }
 

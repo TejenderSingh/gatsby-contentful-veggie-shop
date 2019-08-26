@@ -4,17 +4,12 @@
 
 .defaultBg {
   min-height: calc(100vh - 56px);
+}
+.cntr {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-position: center;
-  background-size: cover;
 }
 .page-bg {
   min-height: 40vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-position: center;
-  background-size: cover;
 }
