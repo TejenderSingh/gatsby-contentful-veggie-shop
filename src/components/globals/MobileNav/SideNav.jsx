@@ -9,17 +9,20 @@ const SideNav = ({ nav, closeNav }) => {
     classes = "side-nav open"
   }
   return (
-    <div className="relative block md:hidden">
+    <div className={`relative block md:hidden`}>
       <div className={classes}>
         <div style={{ position: "absolute", top: 20, left: 20 }}>
-          <FiX
-            className="text-4xl text-gray-700 hover:text-gray-900 cursor-pointer"
+          <span
+            className={`text-4xl text-gray-800 hover:text-gray-600 cursor-pointer`}
             onClick={closeNav}
-          ></FiX>
+            style={{ transition: " all .2s ease-in-out" }}
+          >
+            <FiX />
+          </span>
         </div>
         <Nav
           ulClasses="flex flex-col text-lg font-semibold"
-          linkClasses="text-grey-darker my-4 font-semibold hover:text-teal-600"
+          linkClasses="text-gray-800 hover:text-gray-600 text-xl my-4 font-semibold"
           closeNav={closeNav}
         />
       </div>

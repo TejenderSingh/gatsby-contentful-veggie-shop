@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 import SectionWrapper from "../components/SectionWrapper"
 import SEO from "../components/seo"
 
-const IndexPage = ({ data }) => (
+const AboutPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <BackgroundSection
@@ -60,4 +60,4 @@ export const query = graphql`
     }
   }
 `
-export default IndexPage
+export default AboutPage

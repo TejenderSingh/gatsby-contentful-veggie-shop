@@ -5,6 +5,7 @@ import Backdrop from "../components/globals/MobileNav/Backdrop"
 import SideNav from "../components/globals/MobileNav/SideNav"
 // import Navbar from "../components/globals/navbar/Navbar"
 import Navbar from "../components/globals/navbar/Navbar"
+import Footer2 from "./globals/footer/Footer2"
 import "./layout.css"
 
 class Layout extends Component {
@@ -31,14 +32,17 @@ class Layout extends Component {
         <div className={`antialiased bg-gray-200 min-h-screen font-sans`}>
           <SideNav nav={this.state.navOpen} closeNav={this.closeSideNav} />
           {backdrop}
-          <div className={`bg-gray-900`}>
+          <div className={`bg-white shadow-xl`}>
             <Navbar toggleNav={this.toggleSideNav} />
           </div>
           <div className={``} style={{ minHeight: `calc(100vh - 80px)` }}>
             <main>{this.props.children}</main>
           </div>
-          <div className={`bg-green-200`}>
+          <div className={`bg-white`}>
             <Footer />
+          </div>
+          <div className={`bg-gray-900`}>
+            <Footer2 />
           </div>
         </div>
       </>

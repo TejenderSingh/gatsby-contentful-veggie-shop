@@ -3,7 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff;
+  background: #ffffff;
+  color: #f7fafc;
   z-index: 200;
   position: fixed;
   top: 0;

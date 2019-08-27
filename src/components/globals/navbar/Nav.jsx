@@ -19,6 +19,8 @@ const Nav = ({ ulClasses, navClasses, linkClasses, closeNav }) => {
               to={item.link}
               className={linkClasses}
               onClick={closeNav}
+              style={{ transition: ".2s ease-in-out" }}
+              activeStyle={{ color: "#48bb78" }}
             >
               {item.name}
             </Link>

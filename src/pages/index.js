@@ -1,4 +1,4 @@
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import React from "react"
 import BackgroundSection from "../components/globals/BackgroundSection"
 import AboutHomePage from "../components/HomePageComponents/About"
@@ -28,12 +28,13 @@ const IndexPage = ({ data }) => (
           </h1>
         </div>
         <div className={`mt-12 flex justify-center`}>
-          <button
-            class="bg-gray-100 hover:bg-green-600 text-lg sm:text-xl md:text-2xl text-gray-800 hover:text-gray-100 font-semibold capitalize py-2 px-4 rounded shadow"
+          <Link
+            to="/products"
+            className={`bg-gray-100 hover:bg-green-600 text-lg sm:text-xl md:text-2xl text-gray-800 hover:text-gray-100 font-semibold capitalize py-2 px-4 rounded shadow`}
             style={{ transition: ".2s ease-in-out" }}
           >
             see Products
-          </button>
+          </Link>
         </div>
       </div>
     </BackgroundSection>
