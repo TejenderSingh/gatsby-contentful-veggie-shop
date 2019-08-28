@@ -33,12 +33,15 @@ export const query = graphql`
         }
       }
     }
-    products: allContentfulVeggieProducts {
+    products: allContentfulVeggieProducts(
+      sort: { fields: [productPrice], order: ASC }
+    ) {
       edges {
         node {
           id
           productName
           productPrice
+          productCategory
           quantity
           special
           productDescription {

@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from "react"
 import HamburgerIcon from "../MobileNav/HamburgerIcon"
 import SocialIcons from "../SocialIcons"
@@ -13,9 +14,9 @@ const Navbar = ({ toggleNav }) => {
         <div className={`md:hidden`}>
           <HamburgerIcon nav={toggleNav} />
         </div>
-        <div className={`flex items-center h-full py-0`}>
+        <Link to="/" className={`flex items-center`}>
           <LogoImage />
-        </div>
+        </Link>
         <Nav
           navClasses="hidden md:block"
           linkClasses="text-gray-800 ml-10 font-semibold hover:text-gray-600"

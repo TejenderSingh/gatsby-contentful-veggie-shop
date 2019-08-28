@@ -13,3 +13,6 @@
 .page-bg {
   min-height: 40vh;
 }
+.active-tab {
+  background: #1a202c;
+}

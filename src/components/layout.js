@@ -35,7 +35,7 @@ class Layout extends Component {
           <div className={`bg-white shadow-xl`}>
             <Navbar toggleNav={this.toggleSideNav} />
           </div>
-          <div className={``} style={{ minHeight: `calc(100vh - 80px)` }}>
+          <div className={``} style={{ minHeight: `calc(100vh - 70px)` }}>
             <main>{this.props.children}</main>
           </div>
           <div className={`bg-white`}>
