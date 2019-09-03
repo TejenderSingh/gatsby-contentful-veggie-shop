@@ -3,13 +3,13 @@ import React from "react"
 import BackgroundSection from "../components/globals/BackgroundSection"
 import ImageTitle from "../components/globals/ImageTitle"
 import Layout from "../components/layout"
-import Products from "../components/Products/Products"
+import Products from "../components/ProductsPage/Products"
 import SectionWrapper from "../components/SectionWrapper"
 import SEO from "../components/seo"
 
 const ProductsPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Products" />
     <BackgroundSection
       img={data.img.childImageSharp.fluid}
       styleClass="page-bg default-bg"

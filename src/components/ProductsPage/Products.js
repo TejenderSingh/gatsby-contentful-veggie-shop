@@ -59,7 +59,7 @@ class Products extends Component {
       return (
         <>
           <div
-            className={`flex justify-center text-gray-800 mb-8`}
+            className={`flex flex-wrap justify-center text-gray-800 mb-4 md:mb-6`}
             ref={this.productAll}
           >
             {this.state.categories.map((category, index) => {
@@ -67,7 +67,7 @@ class Products extends Component {
                 <button
                   type="button"
                   key={index}
-                  className="bg-indigo-500 mx-2 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded capitalize focus:outline-none"
+                  className="bg-indigo-500 hover:bg-indigo-700 text-white text-sm lg:text-base font-semibold py-2 px-4 mx-2 mb-2 md:mb-0 rounded capitalize focus:outline-none"
                   style={{ transition: ".1s ease-in-out" }}
                   onClick={e => {
                     this.handleItems(category, e)

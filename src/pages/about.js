@@ -9,7 +9,7 @@ import SEO from "../components/seo"
 
 const AboutPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="About Veggieland" />
     <BackgroundSection
       img={data.img.childImageSharp.fluid}
       styleClass="page-bg style-bg"
